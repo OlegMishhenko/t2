@@ -1,0 +1,55 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    font: 30px sans-serif;
+}
+#wrapper {
+	width: 90%;
+    margin: 0 auto;
+}
+.block {
+    font-size: 1em;
+    box-sizing: border-box;
+    background: green;
+    height: 300px;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.block:hover {
+    background-color: greenyellow;
+    color: rebeccapurple;
+}
+
+
+@media screen and (min-width: 600px) {
+    .block {
+        width: 24%;
+    }
+    .block:not(:nth-child(4n)) {
+        margin-right: 1.333333%;
+    }
+    .row {
+        font-size: 25px;
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    .block {
+        width: 49%;
+    }
+    .block:not(:nth-child(2n)) {
+        margin-right: 2%;
+    }
+    .row {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .block {
+        width: 100%;
+    }
+    .row {
+        font-size: 10px;
+    }
+}
